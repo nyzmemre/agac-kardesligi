@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 // Relative (göreceli) path
 import '../gerecler/renkler.dart';
+import 'bitki_ekle.dart';
 
 class GirisYap extends StatefulWidget {
   @override
@@ -17,7 +18,7 @@ class _GirisYapState extends State<GirisYap> {
   Future<void> _googleIleGirisYap() async {
     try {
       final GoogleSignInAccount googleHesabi = await _googleSignIn.signIn();
-      /* final GoogleSignInAuthentication googleDogrulama =
+       final GoogleSignInAuthentication googleDogrulama =
           await googleHesabi.authentication;
 
       // Create a new credential
@@ -36,7 +37,7 @@ class _GirisYapState extends State<GirisYap> {
         Navigator.popUntil(context, (route) => route.isFirst);
       } catch (e) {
         print(e);
-      } */
+      }
     } catch (error) {
       print(error);
     }
@@ -77,7 +78,7 @@ class _GirisYapState extends State<GirisYap> {
                       onPressed: () {},
                     ),
                     SizedBox(height: 16),
-                    // TODO Sonradan aktifleştirilecek
+                    // TODO: Sonradan aktifleştirilecek
                     Center(
                       child: Text(
                         "Hesabınız yoksa buradan kayıt olun.",
